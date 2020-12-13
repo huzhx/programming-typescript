@@ -13,7 +13,11 @@ class Position {
   ){}
 }
 
-class Piece {
+/**
+ * Don't want users to instantiate the Piece class directly.
+ * We want them to extend it to create a Queen, Bishop, and etc.
+ */
+abstract class Piece {
   protected position: Position
   constructor(
     private readonly color: Color,
